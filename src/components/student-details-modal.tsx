@@ -436,11 +436,11 @@ function ModalForm({
       )}
 
       {/* Date of birth — USWDS memorable date pattern */}
-      <fieldset className="flex flex-col border-0 m-0 p-0 min-w-0">
-        <legend className="text-base font-semibold leading-5 text-gray-800 mb-1.5">
+      <div role="group" aria-labelledby="dob-label" className="flex flex-col gap-1.5">
+        <p id="dob-label" className="text-base font-semibold leading-5 text-gray-800">
           Date of birth
-        </legend>
-        <div className={`flex ${isDesktop ? "gap-4" : "gap-2"} w-full overflow-hidden`}>
+        </p>
+        <div className={`flex ${isDesktop ? "gap-4" : "gap-2"}`}>
           <div className="flex flex-col gap-1.5 flex-[2_1_0] min-w-0">
             <Label required>Month</Label>
             <SelectInput
@@ -478,7 +478,7 @@ function ModalForm({
             />
           </div>
         </div>
-      </fieldset>
+      </div>
 
       {/* Year of High School Graduation */}
       <div className="flex flex-col gap-1.5">
