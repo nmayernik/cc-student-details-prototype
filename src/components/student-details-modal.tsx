@@ -229,11 +229,8 @@ export default function StudentDetailsModal({ open, onClose }: StudentDetailsMod
           ${isAnimating ? "opacity-100 scale-100" : "opacity-0 scale-95"}
         `}
       >
-        <div className="relative shrink-0">
-          <ModalHeader variant="desktop" onClose={onClose} />
-          <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-white/0 to-white pointer-events-none" />
-        </div>
-        <div className="flex-1 overflow-y-auto px-6 py-2">
+        <ModalHeader variant="desktop" onClose={onClose} />
+        <div className="flex-1 overflow-y-auto px-6 pb-2">
           <ModalForm
             variant="desktop"
             addMyself={addMyself}
@@ -261,10 +258,7 @@ export default function StudentDetailsModal({ open, onClose }: StudentDetailsMod
             timeZones={timeZones}
           />
         </div>
-        <div className="relative shrink-0">
-          <div className="absolute top-0 left-0 right-0 h-6 -translate-y-full bg-gradient-to-t from-white/0 to-white pointer-events-none" />
-          <ModalFooter variant="desktop" onClose={onClose} />
-        </div>
+        <ModalFooter variant="desktop" onClose={onClose} />
       </div>
 
       {/* Mobile bottom sheet */}
@@ -276,11 +270,8 @@ export default function StudentDetailsModal({ open, onClose }: StudentDetailsMod
           ${isAnimating ? "translate-y-0" : "translate-y-full"}
         `}
       >
-        <div className="relative shrink-0">
-          <ModalHeader variant="mobile" onClose={onClose} />
-          <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-b from-white/0 to-white pointer-events-none" />
-        </div>
-        <div className="flex-1 overflow-y-auto px-4 py-2">
+        <ModalHeader variant="mobile" onClose={onClose} />
+        <div className="flex-1 overflow-y-auto px-4 pb-2">
           <ModalForm
             variant="mobile"
             addMyself={addMyself}
@@ -308,10 +299,7 @@ export default function StudentDetailsModal({ open, onClose }: StudentDetailsMod
             timeZones={timeZones}
           />
         </div>
-        <div className="relative shrink-0">
-          <div className="absolute top-0 left-0 right-0 h-6 -translate-y-full bg-gradient-to-t from-white/0 to-white pointer-events-none" />
-          <ModalFooter variant="mobile" onClose={onClose} />
-        </div>
+        <ModalFooter variant="mobile" onClose={onClose} />
       </div>
     </div>
   );
