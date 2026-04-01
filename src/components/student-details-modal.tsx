@@ -133,11 +133,11 @@ function SelectInput({
   );
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full min-w-0 overflow-hidden">
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none rounded-lg border border-input-border bg-white px-3.5 py-2.5 pr-10 text-base leading-6 shadow-[0_1px_2px_rgba(16,24,40,0.05)] focus:outline-none focus:ring-2 focus:ring-navy-600 focus:border-navy-600 text-gray-850"
+        className="w-full max-w-full appearance-none rounded-lg border border-input-border bg-white px-3.5 py-2.5 pr-10 text-base leading-6 shadow-[0_1px_2px_rgba(16,24,40,0.05)] focus:outline-none focus:ring-2 focus:ring-navy-600 focus:border-navy-600 text-gray-850 text-ellipsis"
         style={{ color: value ? undefined : "#707070" }}
       >
         <option value="" disabled>
@@ -436,11 +436,11 @@ function ModalForm({
       )}
 
       {/* Date of birth — USWDS memorable date pattern */}
-      <fieldset className="flex flex-col border-0 m-0 p-0">
+      <fieldset className="flex flex-col border-0 m-0 p-0 min-w-0">
         <legend className="text-base font-semibold leading-5 text-gray-800 mb-1.5">
           Date of birth
         </legend>
-        <div className={`flex ${isDesktop ? "gap-4" : "gap-2"}`}>
+        <div className={`flex ${isDesktop ? "gap-4" : "gap-2"} w-full overflow-hidden`}>
           <div className="flex flex-col gap-1.5 flex-[2_1_0] min-w-0">
             <Label required>Month</Label>
             <SelectInput
