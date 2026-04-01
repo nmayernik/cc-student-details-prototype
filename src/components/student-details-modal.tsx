@@ -70,18 +70,31 @@ function Checkbox({
       disabled={disabled}
       onClick={() => onChange(!checked)}
       className={`
-        flex items-center justify-center shrink-0 size-5 rounded-[6px] border transition-colors
+        flex items-center justify-center shrink-0 size-5 rounded-[6px] border border-solid transition-colors
         ${disabled
           ? "bg-gray-100 border-gray-300 cursor-not-allowed"
           : checked
-            ? "bg-navy-50 border-navy-600"
+            ? "bg-input-checked border-input-checked"
             : "bg-white border-input-border hover:border-gray-600"
         }
       `}
     >
       {checked && !disabled && (
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#2c78a0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M11.6667 3.5L5.25 9.91667L2.33333 7" />
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          aria-hidden
+          className="shrink-0 text-white"
+        >
+          <path
+            d="M11.6667 3.5L5.25 9.91667L2.33333 7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       )}
     </button>
@@ -436,7 +449,7 @@ function ModalForm({
       )}
 
       {/* Date of birth — USWDS memorable date pattern */}
-      <div role="group" aria-labelledby="dob-label" className="flex flex-col gap-1.5">
+      <div role="group" aria-labelledby="dob-label" className="flex flex-col gap-[6px]">
         <p id="dob-label" className="text-base font-semibold leading-5 text-gray-800">
           Date of birth
         </p>

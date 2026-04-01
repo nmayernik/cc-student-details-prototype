@@ -25,6 +25,8 @@
   --color-input-border: #8c8c8c;
   --color-input-border-light: #b3b3b3;
   --color-icon-border: #c8c8c8;
+  /* Figma: input/bg-color/checked/default */
+  --color-input-checked: #215a78;
 }
 
 body {
